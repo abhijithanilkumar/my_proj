@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ block.super }}Home{% endblock %}
+
+{% block navbar-left %}
+  {% include "_navbar.html" with active_link="home" %}
+{% endblock %}
+
+{% block navbar-right %}
+  {% if not user.is_authenticated %}
+<a class="btn btn-default" href="{% url 'accounts:login' %}" role="button">Log in</a>
+<a class="btn btn-primary" href="{% url 'accounts:signup' %}" role="button">Sign up</a>
+  {% else %}
+    {{ block.super }}
+  {% endif %}
+{% endblock %}
+
+{% block splash %}
+  <div class="jumbotron jumbotron-carousel corporate-jumbo">
+    <!--<div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-8">
+          <h1>{% include "_brandname.html" %}</h1>
+          <p>NC order online.</p>
+	  
+        </div>
+        <div class="col-md-4 col-sm-4">
+
+        </div>
+      </div>
+    </div>-->
+  </div>
+{% endblock splash %}
+
+{% block container %}
+<!-- Benefits of the Django application -->
+<a name="about"></a>
+
+	<div id="page">
+		<div id="header">
+			<div id="sidebar">
+				<a href="index.php" id="logo"><img src="{% static 'site/img/logo2.png' %}" height="182" width="220" alt="LOGO"></a>
+				<div id="navigation">
+					<ul>
+						<li class="selected">
+							<a href="index.php">Home</a>
+						</li>
+						<li class="menu">
+							<a href="index.php">Menu</a>
+							<div class="sub">
+								<a href="menug.php">GB NC</a> <a href="menutr.php">TRUPTI NC</a> <a href="menupr.php">Prasanth NC</a> <a href="menu3rd.php" class="last-child">3rd Block NC</a>
+							</div>
+							<span></span>
+						</li>
+						<li>
+							<a href="login.php">LOGIN for NC</a>
+						</li>
+						<li class="last1">
+							<a href="comp.php">Read Reviews</a>
+						</li>
+						<li class="last">
+							<a href="complaint.php">Write Reviews</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="adbox">
+				<h1>NITK CANTEENS!!!</h1>
+				<div class="frame">
+					<div class="section">
+						<p>
+
+
+							This is the ultimate website to order food for us,NITKians. All NC's one place!! This website gives you the best deal all the time. Order anytime... and from any NC in campus...
+						</p>
+					</div>
+					<div class="section">
+						<h2>Order from ANY NC, ANY time  and get the BEST deals!!</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="contents">
+			<div id="articles">
+				<div>
+					<div class="frame">
+						<img src="{% static 'site/img/chickenkebab.jpeg' %}" alt="Img" height="180" width="180">
+						<h2>Chicken Kebab</h2>
+						<p>
+							Heaven for non-vegetarians!! Amazing prices and even better quality of chicken items. Compare through NCs and choose the one you like the most. Prashant and GB NC give best quality chicken in affordale prices. 
+						</p>
+						<!--<a href="index.php" class="more">put comapare thing now</a>-->
+					</div>
+					<div class="frame">
+						<img src="{% static 'site/img/dosa.jpeg' %}" alt="Img" height="192" width="189">
+						<h2>DOSA!!</h2>
+						<p>
+							Yummy Dosas in every NC!! Ranging from sada dosa to schezwan Dosa..All at unbelievable prices. Click this link to compare the dosas. Because HUNGRY KYA??? DOSA kha :P
+						</p>
+						<a href="index.php" class="more">Learn More</a>
+					</div>
+					<div id="featured">
+						<ul>
+							<li>
+								<a href="menug.php"> <img src="{% static 'site/img/GBNC.png' %}" height="170" width="180" alt="Img">
+							    <h3>GB NC</h3>
+								</a>
+							</li>
+							<li>
+								<a href="menutr.php"> <img src="{% static 'site/img/trupti.jpeg' %}" height="170" width="180" alt="Img">
+								<h3>TRUPTI NC</h3>
+								</a>
+							</li>
+							<li>
+								<a href="menupr.php"> <img src="{% static 'site/img/prasanth.jpeg' %}" height="170" width="180" alt="Img">
+								<h3>PRASANTH NC</h3>
+								</a>
+							</li>
+							<li>
+								<a href="menu3rd.php"> <img src="{% static 'site/img/3block.png' %}" height="170" width="180" alt="Img">
+								<h3>3rd BLOCK NC</h3>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="dummy">
+			</div>
+		</div>
+		<div id="footer">
+			<div class="header">
+				<div class="body">
+					<ul>
+						<li>
+							<h4>Reach non-veg NCs</h4>
+							<span>&gt; <a href="menug.php">GB NC</a></span> <span>&gt; <a href="menupr.php"> Prasanth NC</a></span>
+						</li>
+						<li>
+							<h4>Dosa</h4>
+							<span>&gt; <a href="#header">plain</a></span> <span>&gt; <a href="#header"> MASALA</a></span> <span>&gt; <a href="#header">Cheese</a></span>
+						</li>
+						<li>
+							<h4>PARATHA</h4>
+							<span>&gt; <a href="#header">ALOO</a></span> <span>&gt; <a href="#header">PANEER</a></span> <span>&gt; <a href="#header">chandini chowk</a></span>
+						</li>
+						<li class="last-child">
+							<h4>NC LOGIN</h4>
+							<span>&gt; <a href="#header">Create Account</a></span> <span>&gt; <a href="login.php">Manage Account</a></span> <span>&gt; <a href="#header">Get Upgrade</a></span>
+						</li>
+					</ul>
+				</div>
+				<div class="footer">
+					
+					<p>
+						Copyright 2015 Company Name. All Rights Reserved.
+					</p>
+				</div>
+			</div>
+			<p id="footnote">
+				This website has been designed by Akankshya, Debarati and Deepti.Its for the sole purpose of DBMS project. And rights are reserved. Intellectual property is reserved.
+			</p>
+		</div>
+	</div>
+
+{% endblock container %}
+
+{% block scripts %}
+<script src="{% static 'site/js/site.js' %}"></script>
+{% endblock scripts %}
+
