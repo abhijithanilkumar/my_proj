@@ -197,7 +197,9 @@ img {
 }
 /** Adbox **/
 #adbox {
-	background: url("/static/site/img/sushi.png") no-repeat left top;
+	background: url("/static/site/img/mainimage.jpg") no-repeat center;
+	height: 643px
+	width: auto;
 	min-height: 643px;
 }
 #adbox h1 {
