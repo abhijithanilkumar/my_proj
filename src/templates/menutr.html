@@ -77,9 +77,11 @@
 		</div>
 		<div id="contents">
 			<ul id="gallery">
+                {% for menu in trupti %}
 				<li>
-					<a href="menu.html"> <img src="{% static 'site/img/dosa.jpeg' %}" height="182" width="220" alt="Img"> <b>{{trupti}}</b> RS 23</a>
+					<a href="menu.html"> <img src="{% static 'site/img/dosa.jpeg' %}" height="182" width="220" alt="Img"> <b>{{menu.item_name}}</b> RS 23</a>
 				</li>
+                {% endfor %}
 				<li>
 					<a href="menu.html"> <img src="{% static 'site/img/chowmein.jpeg' %}" height="182" width="220" alt="Img"> <b>Chowmein</b> RS. 45</a>
 				</li> 
