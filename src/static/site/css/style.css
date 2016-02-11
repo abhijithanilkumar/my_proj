@@ -69,10 +69,10 @@ img {
 	text-align: center;
 }
 #navigation li a, #navigation ul li.menu:hover a, #navigation ul li.menu span {
-	background: url(../images/bg-menu.png) no-repeat;
+	background: url(../img/bg-menu.png) no-repeat;
 }
 #navigation li a, #navigation ul li.last1:hover a, #navigation ul li.last1 span {
-	background: url(../images/bg-menu.png) no-repeat;
+	background: url(../img/bg-menu.png) no-repeat;
 }
 #navigation li > a {
 	background-position: 0 -61px;
@@ -244,13 +244,13 @@ img {
 }
 /*------------------------------ CONTENTS ------------------------------*/
 #contents div.header {
-	background: url(../images/bg-content-top.png) no-repeat left top;
+	background: url(../img/bg-content-top.png) no-repeat left top;
 	width: 733px;
 	margin-bottom: 18px;
 	padding-top: 17px;
 }
 .body {
-	background: url(../images/bg-content.png) repeat-y left top;
+	background: url(../img/bg-content.png) repeat-y left top;
 	padding: 13px 30px;
 }
 .body h2 {
@@ -274,7 +274,7 @@ img {
 	color: #f9900c;
 }
 .footer {
-	background: url(../images/bg-content-bottom.png) no-repeat left bottom;
+	background: url(../img/bg-content-bottom.png) no-repeat left bottom;
 	padding-bottom: 17px;
 }
 .more {
@@ -292,7 +292,7 @@ img {
 	height: 480px;
 }
 #articles {
-	background: url(../images/bg-body2.png) repeat-x left top;
+	background: url(../img/bg-body2.png) repeat-x left top;
 	width: 100%;
 	min-height: 540px;
 	padding: 24px 0 0;

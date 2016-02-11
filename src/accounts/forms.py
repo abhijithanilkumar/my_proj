@@ -25,6 +25,7 @@ class LoginForm(AuthenticationForm):
             Field('remember_me'),
             Submit('sign_in', 'Log in',
                    css_class="btn btn-lg btn-primary btn-block"),
+            
             )
 
 

@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ block.super }}Home{% endblock %}
+
+{% block navbar-left %}
+  {% include "_navbar.html" with active_link="menu" %}
+{% endblock %}
+
+{% block navbar-right %}
+  {% if not user.is_authenticated %}
+<a class="btn btn-default" href="{% url 'accounts:login' %}" role="button">Log in</a>
+<a class="btn btn-primary" href="{% url 'accounts:signup' %}" role="button">Sign up</a>
+  {% else %}
+    {{ block.super }}
+  {% endif %}
+{% endblock %}
+
+{% block splash %}
+  <div class="jumbotron jumbotron-carousel corporate-jumbo">
+    <!--<div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-8">
+          <h1>{% include "_brandname.html" %}</h1>
+          <p>NC order online.</p>
+	  
+        </div>
+        <div class="col-md-4 col-sm-4">
+
+        </div>
+      </div>
+    </div>-->
+  </div>
+{% endblock splash %}
+
+{% block container %}
+	<div id="page">
+		<div id="header">
+			<div id="sidebar">
+				<a href="index.html" id="logo"><img src="{% static 'site/img/logo2.png' %}"  height="182" width="220" alt="LOGO"></a>
+				<div id="navigation">
+					<ul>
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						<li class="menu selected">
+							<a href="index.html">Menu</a>
+							<div class="sub">
+                                 <a href="menugb.html">GBNC</a> <a href="menut.html">TRUPTI NC</a> <a href="menup.html">Prasanth NC</a> <a href="menu3b.html" class="last-child">3rd Block NC</a>
+							</div>
+							<span></span>
+						</li>
+						<li>
+							<a href="blog.html">Login for NC</a>
+						</li>
+						<li class="last">
+							<a href="about.html">Reviews</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="menu-adbox">
+				<div class="details">
+
+					<h1>GB NC</h1>
+					<p>
+						Fresh and amazing food direct from the Girls block NC.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="contents">
+			<ul id="gallery">
+				<li>
+					<a href="menu.html"> <img src="{% static 'site/img/dosa.jpeg' %}" height="182" width="220" alt="Img"> <b>DOSA</b> RS 25</a>
+				</li>
+				<li>
+					<a href="menu.html"> <img src="{% static 'site/img/chowmein.jpeg' %}" height="182" width="220" alt="Img"> <b>Chowmein</b> RS. 40</a>
+				</li> 
+				<li>
+					<a href="menu.html"> <img src="{% static 'site/img/chickenkebab.jpeg' %}" height="182" width="220" alt="Img"> <b>Chicken Kebab</b> RS. 20</a>
+				</li>
+				<li>
+					<a href="menu.html"> <img src="{% static 'site/img/paratha.jpeg' %}" height="182" width="220" alt="Img"> <b>Paratha</b>RS 23
+				</li>
+				
+			</ul>
+		</div>
+		<div id="footer">
+			<div class="header">
+				<div class="body">
+					<ul>
+						<li>
+							<h4>Reach non-veg NCs</h4>
+							<span>&gt; <a href="#header">GB NC</a></span> <span>&gt; <a href="#header"> Prasanth NC</a></span>
+						</li>
+						<li>
+							<h4>Dosa</h4>
+							<span>&gt; <a href="#header">plain</a></span> <span>&gt; <a href="#header"> MASALA</a></span> <span>&gt; <a href="#header">Cheese</a></span>
+						</li>
+						<li>
+							<h4>PARATHA</h4>
+							<span>&gt; <a href="#header">ALOO</a></span> <span>&gt; <a href="#header">PANEER</a></span> <span>&gt; <a href="#header">chandini chowk</a></span>
+						</li>
+						<li class="last-child">
+							<h4>NC LOGIN</h4>
+							<span>&gt; <a href="#header">Create Account</a></span> <span>&gt; <a href="#header">Manage Account</a></span> <span>&gt; <a href="#header">Get Upgrade</a></span>
+						</li>
+					</ul>
+				</div>
+				<div class="footer">
+					<div id="connect">
+						<a href="http://freewebsitetemplates.com/go/facebook/" target="_blank" class="facebook"></a> <a href="http://freewebsitetemplates.com/go/twitter/" target="_blank" class="twitter"></a> <a href="http://freewebsitetemplates.com/go/googleplus/" target="_blank" class="googleplus"></a> <a href="http://freewebsitetemplates.com/go/vimeo/" target="_blank" class="vimeo"></a>
+					</div>
+					<p>
+						Copyright 2023 Company Name. All Rights Reserved.
+					</p>
+				</div>
+			</div>
+			<p id="footnote">
+				This website template has been designed by <a href="http://www.freewebsitetemplates.com/">Free Website Templates</a> for you, for free. You can replace all this text with your own text. You can remove any link to our website from this website template, you're free to use this website template without linking back to us. If you're having problems editing this website template, then don't hesitate to ask for help on the <a href="http://www.freewebsitetemplates.com/forums/">Forum</a>.
+			</p>
+		</div>
+	</div>
+{% endblock container %}
+
+{% block scripts %}
+<script src="{% static 'site/js/site.js' %}"></script>
+{% endblock scripts %}

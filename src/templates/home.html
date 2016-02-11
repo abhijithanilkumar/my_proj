@@ -13,6 +13,7 @@
   {% if not user.is_authenticated %}
 <a class="btn btn-default" href="{% url 'accounts:login' %}" role="button">Log in</a>
 <a class="btn btn-primary" href="{% url 'accounts:signup' %}" role="button">Sign up</a>
+<a class="btn btn-primary" href="{% url 'accounts:login_nc' %}" role="button">Log in NC</a>
   {% else %}
     {{ block.super }}
   {% endif %}
@@ -51,7 +52,7 @@
 						<li class="menu">
 							<a href="index.php">Menu</a>
 							<div class="sub">
-								<a href="menug.php">GB NC</a> <a href="menutr.php">TRUPTI NC</a> <a href="menupr.php">Prasanth NC</a> <a href="menu3rd.php" class="last-child">3rd Block NC</a>
+								<a href="menugb.html">GB NC</a> <a href="menutr.html">TRUPTI NC</a> <a href="menup.html">Prasanth NC</a> <a href="menu3rd.php" class="last-child">3rd Block NC</a>
 							</div>
 							<span></span>
 						</li>
@@ -106,18 +107,18 @@
 					<div id="featured">
 						<ul>
 							<li>
-								<a href="menug.php"> <img src="{% static 'site/img/GBNC.png' %}" height="170" width="180" alt="Img">
+								<a href="menugb.html"> <img src="{% static 'site/img/GBNC.png' %}" height="170" width="180" alt="Img">
 							    
 								</a>
 							</li>
                                           
 							<li>
-								<a href="menutr.php"> <img src="{% static 'site/img/trupti.jpeg' %}" height="170" width="180" alt="Img">
+								<a href="menutr.html"> <img src="{% static 'site/img/trupti.jpeg' %}" height="170" width="180" alt="Img">
 								
 								</a>
 							</li>
 							<li>
-								<a href="menupr.php"> <img src="{% static 'site/img/prasanth.jpeg' %}" height="170" width="180" alt="Img">
+								<a href="menup.html"> <img src="{% static 'site/img/prasanth.jpeg' %}" height="170" width="180" alt="Img">
 								
 								</a>
 							</li>
@@ -140,7 +141,7 @@
 					<ul>
 						<li>
 							<h4>Reach non-veg NCs</h4>
-							<span>&gt; <a href="menug.php">GB NC</a></span> <span>&gt; <a href="menupr.php"> Prasanth NC</a></span>
+							<span>&gt; <a href="menugb.html">GB NC</a></span> <span>&gt; <a href="menup.html"> Prasanth NC</a></span>
 						</li>
 						<li>
 							<h4>Dosa</h4>
