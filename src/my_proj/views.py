@@ -18,6 +18,7 @@ def truptiNC(request):
 
 class TruptiNC(generic.TemplateView):
     template_name = "menutr.html"
+    print("heyy")
 
    #def get_queryset(self):
 		#menus = Menu.objects.all()
