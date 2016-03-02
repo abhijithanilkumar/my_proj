@@ -1,5 +1,5 @@
 from django.views import generic
-from accounts.models import Menu 
+from accounts.models import Menu
 from django.http import HttpResponse
 from django.shortcuts import render
 
@@ -18,7 +18,6 @@ def truptiNC(request):
 
 class TruptiNC(generic.TemplateView):
     template_name = "menutr.html"
-    print("heyy")
 
    #def get_queryset(self):
 		#menus = Menu.objects.all()
