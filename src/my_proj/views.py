@@ -1,5 +1,5 @@
 from django.views import generic
-from accounts.models import Menu 
+from accounts.models import Menu
 from django.http import HttpResponse
 from django.shortcuts import render
 
@@ -13,16 +13,16 @@ class AboutPage(generic.TemplateView):
 def truptiNC(request):
     #menu = Menu.objects.values('item_name')
     #price = Menu.objects.values('price')
-    menu = Menu.objects.all()
-    return render(request, 'menutr.html', {'trupti':menu})
+    menu = Menu.objects.all()    return render(request, 'menutr.html', {'trupti':menu})
 
 class TruptiNC(generic.TemplateView):
     template_name = "menutr.html"
+    print("heyy")
 
    #def get_queryset(self):
 		#menus = Menu.objects.all()
 		#menu_items = []
-		#for menu in menus:
+        		#for menu in menus:
 			#if menu.nc.username =='GBNC':
                         #menu_items.append(menu.item_name)
 		#print("*******************************")

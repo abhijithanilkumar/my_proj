@@ -25,7 +25,7 @@
         <div class="col-md-8 col-sm-8">
           <h1>{% include "_brandname.html" %}</h1>
           <p>NC order online.</p>
-	  
+
         </div>
         <div class="col-md-4 col-sm-4">
 
@@ -59,15 +59,15 @@
 						<li class="last">
 							<a href="about.html">Reviews</a>
 						</li>
-                      
+
 					</ul>
 				</div>
 			</div>
-                        
+
 			<div id="menu-adbox">
-			
+
                         <div class="details">
-                                    
+
 					<h1>TRUPTI</h1>
 					<p>
 						Fresh and amazing food direct from the 7th block NC.
@@ -77,21 +77,31 @@
 		</div>
 		<div id="contents">
 			<ul id="gallery">
-	{% for menu in trupti %}		
+	{% for menu in trupti %}
 		<li>
 					<a href="menu.html"> <img src="{{menu.upload.url}}" height="182" width="220" alt="Img"> <b>{{menu.item_name}}</b> {{menu.price}}</a>
 				</li>
         {% endfor %}
 				<!--<li>
+=======
+=======
+>>>>>>> 87c7ef19f2d3ea043b92f1977bae577d53e29572
+                {% for menu in trupti %}
+				<li>
+					<a href="menu.html"> <img src="{% static 'site/img/dosa.jpeg' %}" height="182" width="220" alt="Img"> <b>{{menu.item_name}}</b> RS 23</a>
+				</li>
+                {% endfor %}
+				<li>
+>>>>>>> Linking the backend to frontend
 					<a href="menu.html"> <img src="{% static 'site/img/chowmein.jpeg' %}" height="182" width="220" alt="Img"> <b>Chowmein</b> RS. 45</a>
-				</li> 
+				</li>
 				<li>
 					<a href="menu.html"> <img src="{% static 'site/img/idli.jpg' %}" height="182" width="220" alt="Img"> <b>idli</b> RS. 10</a>
 				</li>
 				<li>
 					<a href="menu.html"> <img src="{% static 'site/img/paratha.jpeg' %}" height="182" width="220" alt="Img"> <b>Paratha</b>RS 20
 				</li>-->
-				
+
 			</ul>
 		</div>
 		<div id="footer">
