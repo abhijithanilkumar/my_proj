@@ -2,6 +2,7 @@ from django.views import generic
 from accounts.models import Menu
 from django.http import HttpResponse
 from django.shortcuts import render
+from carton.cart import Cart
 
 class HomePage(generic.TemplateView):
     template_name = "home.html"
