@@ -14,6 +14,8 @@ urlpatterns = [
    # url(r'^menugb.html/$', views.GBNC.as_view(), name='menugb'),
    #  url(r'^menup.html/$', views.prashNC.as_view(), name='menup'),
     url(r'^menutr.html/$', views.truptiNC, name='menutr'),
+    url(r'^additem/(?P<num>[0-9]+)/$',views.add, name='add_item'),
+    url(r'^showcart/$',views.show, name='show_cart'),
     url(r'^menugb.html/$', views.GBNC, name='menugb'),
     url(r'^menup.html/$', views.prashNC.as_view(), name='menup'),
     url(r'^admin/', include(admin.site.urls)),

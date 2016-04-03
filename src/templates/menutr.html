@@ -79,9 +79,11 @@
 			<ul id="gallery">
 	{% for menu in trupti %}
 		<li>
-					<a href="menu.html"> <img src="{{menu.upload.url}}" height="182" width="220" alt="Img"> <b>{{menu.item_name}}</b> {{menu.price}}</a>
+					<a href="/additem/{{menu.id}}"> <img src="{{menu.upload.url}}" height="182" width="220" alt="Img"> <b>{{menu.item_name}}</b> {{menu.price}}</a>
 				</li>
         {% endfor %}
+
+        <a class="btn btn-default pull-right" href="/showcart/">Show Cart</a>
 				<!--<li>
 =======
 =======

@@ -14,11 +14,11 @@ class AboutPage(generic.TemplateView):
 def truptiNC(request):
     #menu = Menu.objects.values('item_name')
     #price = Menu.objects.values('price')
-    menu = Menu.objects.all()    return render(request, 'menutr.html', {'trupti':menu})
+    menu = Menu.objects.all()
+    return render(request, 'menutr.html', {'trupti':menu})
 
 class TruptiNC(generic.TemplateView):
     template_name = "menutr.html"
-    print("heyy")
 
    #def get_queryset(self):
 		#menus = Menu.objects.all()
@@ -41,3 +41,12 @@ def GBNC(request):
 
 class prashNC(generic.TemplateView):
     template_name = "menup.html"
+
+def add(request, num=None):
+    cart = Cart(request.session)
+    item = Menu.objects.get(id=num)
+    cart.add(item, price=item.price)
+    return HttpResponse("Added")
+
+def show(request):
+    return render(request, 'shopping_cart.html')

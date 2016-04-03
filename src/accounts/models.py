@@ -34,14 +34,13 @@ class NCSide(models.Model):
     nc_id = models.IntegerField()
     username = models.CharField(max_length = 15, unique=True)
     password = models.CharField(max_length = 20)
-    
     def __str__(self):              # __unicode__ on Python 2
         return self.username
 
 
 class Menu(models.Model):
     nc = models.ForeignKey(NCSide)
-    item_code = models.IntegerField() 
+    item_code = models.IntegerField()
     item_name = models.CharField(max_length = 20)
     price = models.IntegerField()
     upload = models.FileField(upload_to='media/')
@@ -75,4 +74,3 @@ class Order(models.Model):
 
     def __str__(self):              # __unicode__ on Python 2
         return self.order
-

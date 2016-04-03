@@ -1,0 +1,8 @@
+{% load carton_tags %}
+{% get_cart as cart %}
+
+{% for item in cart.items %}
+    {{ item.product.item_name }}
+    {{ item.quantity }}
+    {{ item.subtotal }}
+{% endfor %}
